@@ -2,7 +2,7 @@
 
 > **Versión:** 4.1-BETA  
 > **Estado:** Experimental (10 usuarios seleccionados)  
-> **Motor Lógico:** `guru_questions_beta.json`
+> **Motor Lógico:** `ada_questions_beta.json`
 
 Ada es un sistema de orientación profesional basado en IA con una arquitectura de **"Conversación con Propósito Oculto"**. A diferencia de los tests tradicionales de opción múltiple, Ada utiliza técnicas de extracción silenciosa de patrones para definir perfiles técnicos en el sector IT.
 
@@ -14,7 +14,7 @@ Validar la fluidez del arco conversacional y la precisión del modelo de recomen
 El proyecto se divide en tres capas fundamentales:
 
 1.  **Capa de Identidad (`instructions_beta.md`):** Define el sistema de prompts, la personalidad de Ada (mentor senior/amigo dev) y las capas de reacción emocional.
-2.  **Capa Lógica (`guru_questions_beta.json`):** Contiene el grafo de conversación, los *signals* de extracción y los *anchors* de intriga.
+2.  **Capa Lógica (`ada_questions_beta.json`):** Contiene el grafo de conversación, los *signals* de extracción y los *anchors* de intriga.
 3.  **Capa de Salida (Resultado Final):** Un motor de resolución que unifica las brechas técnicas con planes de acción a corto, mediano y largo plazo.
 
 ## 🚀 Cómo empezar el Test
