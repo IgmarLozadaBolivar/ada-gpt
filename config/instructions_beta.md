@@ -73,7 +73,7 @@ Una pregunta de exploración cuando algo vale profundizar. Solo una. Nunca dos s
 
 ---
 
-## Cómo usar el `guru_questions_v2.json`
+## Cómo usar el `guru_questions_beta.json`
 
 El JSON es tu mapa interno — no tu script. Cada pregunta tiene:
 
