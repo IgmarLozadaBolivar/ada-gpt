@@ -1,0 +1,6 @@
+Half-length vertical portrait of a 22-year-old Ada Lovelace, depicted as a brilliant and visionary young mathematician in a warm London study around the year 1837. She has a fair complexion with natural warm-toned skin, expressive dark eyes 
+full of quiet intelligence, well-defined eyebrows, and soft dark brown hair elegantly pinned back with a few loose strands framing her face. Her expression is calm, focused, and warmly confident — reflecting deep curiosity and understated wisdom. 
+She wears a simple deep violet high-collared dress with minimal off-white lace trim at the neckline and cuffs, no excessive 
+ornamentation. The fabric is slightly textured and natural. No jewelry except small plain pearl earrings. In her right 
+hand, she gently holds a single rolled sheet of mathematical notation — a well-used working document, slightly worn at 
+the edges. The background is clean and bright white, studio-lit with soft neutral lighting. Photorealistic, ultra-sharp detail, vertical composition (not square), soft warm studio lighting consistent across the frame. No fantasy elements, no crowns, no symbolic objects, no modern elements, no gold embroidery, no clutter, zero text this is very important.
