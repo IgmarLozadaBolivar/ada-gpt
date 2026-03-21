@@ -1,0 +1,28 @@
+# .gitignore para Ada - Proyecto GPT
+
+# --- OS Metadata (Linux/Universal) ---
+.DS_Store
+Thumbs.db
+.directory
+*.swp
+*~
+
+# --- IDEs & Editors (VS Code / Cursor / JetBrains) ---
+.vscode/
+.cursor/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Herramientas de Diseño ---
+# Ignorar archivos temporales o de backup de Excalidraw si los hubiera
+*.excalidraw.bak
+*.excalidraw.tmp
+
+# --- Archivos de validación o mocks ---
+.env
+*.log
+
+# --- Documentación y temporales de GPT ---
+# Pensado para archivos tipo borradores como prompts
+config/drafts/
