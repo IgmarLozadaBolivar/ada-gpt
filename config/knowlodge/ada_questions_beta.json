@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "version": "2.0-BETA",
+    "description": "Ada Questions Beta — Versión experimental corta",
+    "total_questions": 7,
+    "modes": {
+      "conversational": "Ada conversa y extrae silenciosamente. Nunca muestra las opciones. Interpreta la respuesta libre usando signals.",
+      "with_fallback": "Arranca conversacional. Si la respuesta es vaga o ambigua, ofrece la escala o las opciones como apoyo.",
+      "direct": "Presenta las opciones directamente. Para preguntas factuales o de contexto laboral concreto."
+    },
+    "anchor_note": "Las preguntas con anchor:true generan un anzuelo que Ada mantiene activo y resuelve solo en el resultado final. Nunca antes."
+  },
+  "personalidad": [
+    {
+      "id": "b1_q1",
+      "phase": 1,
+      "dimension": "A",
+      "mode": "conversational",
+      "extract": "perfil_constructor",
+      "conversation_seed": "Dime la verdad — ¿eres de los que prefiere armar algo desde cero aunque quede feo pero funcione, o de los que no puede avanzar si el código no se ve limpio y ordenado desde el primer minuto?",
+      "followup_if_vague": "¿Te importa más que funcione ya o que esté bien estructurado desde el inicio?",
+      "hook": "Esa preferencia dice más de tu futuro en tech que cualquier título.",
+      "anchor": false,
+      "signals": {
+        "pragmatic_backend": ["desde cero", "que funcione", "sucio", "rápido", "funcional", "lógica"],
+        "perfectionist_frontend": ["limpio", "ordenado", "estética", "estructura", "visual", "maquetación"]
+      }
+    },
+    {
+      "id": "b1_q2",
+      "phase": 1,
+      "dimension": "B",
+      "mode": "conversational",
+      "extract": "curiosidad_profunda",
+      "conversation_seed": "Cuando usas una herramienta nueva, ¿te clavas a leer la documentación para entender cómo funciona por debajo, o vas directo a los ejemplos para ver qué puedes copiar y adaptar ya?",
+      "followup_if_vague": "¿Lees el manual o prefieres romper cosas hasta que funcionen?",
+      "hook": "Esa forma de aprender es la pieza que va a conectar todo al final. Guárdala.",
+      "anchor": true,
+      "signals": {
+        "architect_backend": ["documentación", "por debajo", "entender", "arquitectura", "manual"],
+        "builder_frontend": ["ejemplos", "copiar", "adaptar", "rápido", "ver algo", "tutorial"]
+      }
+    }
+  ],
+  "tecnico": [
+    {
+      "id": "b2_q1",
+      "phase": 2,
+      "mode": "with_fallback",
+      "extract": "stack_actual",
+      "conversation_seed": "Hablemos de fierros. ¿Cuál es ese lenguaje o herramienta donde te sientes 'en casa', donde no tienes que googlear cada dos líneas?",
+      "followup_if_vague": "¿Qué es lo que dominas de verdad hoy?",
+      "signals": {
+        "frontend": ["React", "CSS", "JavaScript", "Tailwind", "Next", "DOM", "HTML"],
+        "backend": ["Node", "Python", "SQL", "API", "Java", "Docker", "PHP", "Laravel"],
+        "data": ["Pandas", "Excel", "Tableau", "R", "Análisis", "SQL"]
+      },
+      "options": [
+        { "label": "A", "value": "1", "span": "Frontend", "tooltip": "Interfaces y experiencia de usuario" },
+        { "label": "B", "value": "2", "span": "Backend", "tooltip": "Lógica, servidores y bases de datos" },
+        { "label": "C", "value": "3", "span": "Data", "tooltip": "Análisis e inteligencia de datos" }
+      ]
+    },
+    {
+      "id": "b2_q2",
+      "phase": 2,
+      "mode": "conversational",
+      "extract": "experiencia_real",
+      "conversation_seed": "¿Cuál ha sido el 'incendio' más difícil que has tenido que apagar programando? Ese error que te quitó el sueño por horas.",
+      "followup_if_vague": "¿Alguna vez has resuelto algo que parecía imposible?",
+      "hook": "Los mejores seniors se forjan en incendios como ese.",
+      "anchor": false,
+      "signals": {
+        "seniority_high": ["producción", "deploy", "servidor", "caído", "db", "merge conflict", "vps"],
+        "seniority_low": ["instalación", "sintaxis", "no corría", "tutorial", "punto y coma"]
+      }
+    }
+  ],
+  "motivacion": [
+    {
+      "id": "b3_q1",
+      "phase": 3,
+      "mode": "conversational",
+      "extract": "afinidad_mercado",
+      "conversation_seed": "Si te ofrecieran el mismo sueldo por: A) Hacer que una app se sienta increíble al usarla, o B) Asegurarte de que esa app nunca se caiga aunque tenga un millón de usuarios... ¿Cuál eliges sin pensar?",
+      "followup_if_vague": "¿Te mueve más la experiencia del usuario o la robustez del sistema?",
+      "hook": "Esa elección define tu ADN profesional.",
+      "anchor": false,
+      "signals": {
+        "ux_frontend": ["increíble", "usarla", "sentir", "interfaz", "diseño"],
+        "scale_backend": ["no se caiga", "millón", "usuarios", "rendimiento", "estabilidad"]
+      }
+    }
+  ],
+  "contexto": [
+    {
+      "id": "b4_q1",
+      "phase": 4,
+      "mode": "direct",
+      "extract": "realidad_mercado",
+      "conversation_seed": "Seamos realistas, estamos en la beta. ¿Tu meta hoy es conseguir tu primer empleo rápido en Colombia o ya estás apuntando al mercado remoto en dólares?",
+      "options": [
+        { "label": "A", "value": "1", "span": "Local (SENA/Empresas nacionales)", "tooltip": "Primer empleo en Bucaramanga, Bogotá o local" },
+        { "label": "B", "value": "2", "span": "Remoto (Latam/USA en USD)", "tooltip": "Mercado internacional y trabajo en dólares" }
+      ]
+    }
+  ],
+  "planes": [
+    {
+      "id": "b5_q1",
+      "phase": 5,
+      "mode": "conversational",
+      "extract": "calibracion_final",
+      "conversation_seed": "Última para cerrar esta beta: ¿Quieres que el plan de acción sea un 'sprint' (intensivo para resultados ya) o una 'maratón' (bases sólidas paso a paso)?",
+      "followup_if_vague": "¿Velocidad para ingresos o profundidad para carrera?",
+      "hook": "Perfecto. Voy a procesar todo lo que me has contado.",
+      "anchor": false,
+      "signals": {
+        "speed": ["sprint", "ya", "rápido", "ingresos", "velocidad"],
+        "depth": ["maratón", "paso a paso", "bases", "fondo", "profundidad"]
+      },
+      "options": [
+        { "label": "A", "value": "1", "span": "Sprint", "tooltip": "Resultados rápidos e ingresos pronto" },
+        { "label": "B", "value": "2", "span": "Maratón", "tooltip": "Bases sólidas y carrera a largo plazo" }
+      ]
+    }
+  ]
+}
